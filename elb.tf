@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "raham-terraform-elb"
-  availability_zones = ["ap-southeast-1a", "ap-southeast-1b"]
+  availability_zones = ["ap-south-1a", "ap-south-1b"]
 
   listener {
     instance_port     = 80
@@ -33,13 +33,13 @@ resource "aws_elb" "bar" {
   database_name           = "mydb"
   master_username         = "raham"
   master_password         = "Rahamshaik#444555"
-  backup_retention_period = 5
+  backup_retention_period = 1
   preferred_backup_window = "07:00-09:00"
 }*/
 
 /*resource "aws_instance" "one" {
   for_each = toset(["one", "two", "three"])
-  ami           = "ami-006be9ab6a140de6e"
+  ami           = "ami-0449c34f967dbf18a"
   instance_type = "t2.micro"
   tags = {
     Name = "instance-${each.key}"
